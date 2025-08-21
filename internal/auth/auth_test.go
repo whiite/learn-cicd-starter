@@ -14,7 +14,7 @@ func TestGetApiKeyNoAuth(t *testing.T) {
 
 func TestGetApiKeyAuthHeader(t *testing.T) {
 	header := http.Header{}
-	header.Add("Authorization", "ApiKey testing")
+	header.Add("Authorization", "bearer testing")
 	_, err := GetAPIKey(header)
 	if err != nil {
 		t.Fatalf("expected key, got error: %v", err)
